@@ -1,11 +1,13 @@
-import React from "react";
-import { ImageContainer } from "./components/atoms/imageContainer/ImageContainer";
+import { AppContainer } from './components/atoms/containers/AppContainer';
+import { CustomButton } from './components/atoms/customButton/CustomButton';
+import { NetworkImage } from "./components/atoms/imageContainer/ImageContainer";
+import { CardsComponent } from "./components/organisms/cardsComponent/CardsComponent";
 
 const App = () => {
   return (
-    <div>
-      <ImageContainer alt="cat" src="https://cataas.com/cat?width=500" />
-    </div>
+    <AppContainer>
+      <CardsComponent />
+    </AppContainer>
   );
 };
 export default App;

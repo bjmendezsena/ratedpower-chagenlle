@@ -1,9 +1,11 @@
-import React, { FunctionComponent, CSSProperties } from "react";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
+interface Props {
+  url: string;
+}
 
-
-export const ImageContainer = styled.img`
-
+export const NetworkImage = styled.div<Props>`
+  background: url(${(props) => props.url}) no-repeat center center;
+  background-size: cover;
 `;
