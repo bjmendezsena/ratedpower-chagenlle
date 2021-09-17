@@ -11,9 +11,9 @@ left: 2vw;
 border-end-end-radius: 10px;
 border-bottom-left-radius: 10px;
 border-top-right-radius: 10px;
-top: 35vh;
+top: 32vh;
 padding: 5px 10px;
 width: 400px;
 z-index: 999;
-${getMediaMobile("left: 5vw; top: 44vh; width: 280px;")}
+${getMediaMobile("left: 5vw; top: 38vh; width: 280px;")}
 `;

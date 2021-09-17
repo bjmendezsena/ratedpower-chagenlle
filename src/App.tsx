@@ -1,12 +1,14 @@
-import { AppContainer } from './components/atoms/containers/AppContainer';
-import { CustomButton } from './components/atoms/customButton/CustomButton';
-import { NetworkImage } from "./components/atoms/imageContainer/ImageContainer";
-import { CardsComponent } from "./components/organisms/cardsComponent/CardsComponent";
+import { AppContainer } from "./components/atoms/containers/AppContainer";
+import { CardGrid } from "./components/organisms/cardGrid/CardGrid";
+
 
 const App = () => {
+
+
+
   return (
     <AppContainer>
-      <CardsComponent />
+      <CardGrid  />
     </AppContainer>
   );
 };
