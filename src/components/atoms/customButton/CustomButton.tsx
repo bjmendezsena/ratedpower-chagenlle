@@ -12,6 +12,7 @@ margin: 20px 0;
   font-size: 30px;
   width: 45vw;
   font-family: 'Chango', cursive;
+  min-width: 300px;
   ${getMediaMobile(`
 width: 60vw;
 `)}
