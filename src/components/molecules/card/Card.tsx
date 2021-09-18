@@ -38,10 +38,15 @@ const CardStyleContainer = styled.div`
 
 export const Card: React.FC<{
   cardInfo: CardInterface;
-  isLoading: boolean;
-}> = ({ cardInfo, isLoading }) => {
-  const { body, text, isMoreThanCent, showMoreClicked, onClickReadMore } =
-    useCard(cardInfo);
+  isLoading?: boolean;
+}> = ({ cardInfo, isLoading = false }) => {
+  const {
+    body,
+    text,
+    isMoreThanCent,
+    showMoreClicked,
+    onClickReadMore,
+  } = useCard(cardInfo);
 
   return (
     <Container>

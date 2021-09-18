@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { getMediaMobile } from "../../../utils/utils";
 
-export const CustomButton = styled.button`
+interface Props {
+  color?: string;
+}
+export const CustomButton = styled.button<Props>`
   margin: 10px 0;
-  background-color: #ff8b4d;
+  background-color: ${(props) => props?.color || "#ff8b4d"};
   border-radius: 50px;
   height: 10vh;
   border: none;
