@@ -1,7 +1,6 @@
 export interface CardInterface {
   image: CatImage;
   fact: Fact;
-  showMore:boolean;
 }
 
 

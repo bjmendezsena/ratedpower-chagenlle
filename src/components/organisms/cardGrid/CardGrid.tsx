@@ -1,11 +1,9 @@
-import { CardsContainer } from "../../atoms/containers/CardsContainer";
+import { CardsContainer } from "../../atoms/containers/cardsContainer/CardsContainer";
 import { CustomButton } from "../../atoms/customButton/CustomButton";
 import { Card } from "../../molecules/card/Card";
 import { Header } from "../../atoms/header/Header";
 import styled from "styled-components";
-import React, { useEffect, useState } from "react";
-import { CardInterface, Fact } from "../../../interfaces/appInterfaces";
-import { catService } from "../../../services/catService";
+import React from "react";
 import { useCardsData } from "../../../hooks/useCardsData";
 
 const MainStyledComponent = styled.div`

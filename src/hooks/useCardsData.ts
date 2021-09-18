@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
-import { CardInterface, Fact } from '../interfaces/appInterfaces';
-import { catService } from '../services/catService';
+import { useEffect, useState } from "react";
+import { CardInterface, Fact } from "../interfaces/appInterfaces";
+import { catService } from "../services/catService";
+import { getRandomArbitrary } from "../utils/utils";
 
 export const useCardsData = () => {
-    const [data, setData] = useState<CardInterface[]>([]);
+  const [data, setData] = useState<CardInterface[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -13,14 +14,16 @@ export const useCardsData = () => {
   const getData = async () => {
     const [errorImages, images] = await catService.getCatImages();
     const [errorFacts, facts] = await catService.getFacts();
+    const randomNumber = getRandomArbitrary(0, images.length - 1);
+
+    const dataImage = images.slice(randomNumber, randomNumber + 4);
 
     if (!errorImages && !errorFacts) {
-      const fetchedData: CardInterface[] = images.map((image, index) => {
+      const fetchedData: CardInterface[] = dataImage.map((image, index) => {
         const { data = [] } = facts;
         const fact = data[index] as Fact;
         return {
           image: image,
-          showMore: false,
           fact,
         };
       });
@@ -37,6 +40,6 @@ export const useCardsData = () => {
   return {
     onClickShuffle,
     data,
-    isLoading
-  }
-}
+    isLoading,
+  };
+};

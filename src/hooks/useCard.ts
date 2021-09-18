@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { CardInterface } from "../interfaces/appInterfaces";
 
 export const useCard = (cardInfo: CardInterface) => {
@@ -11,16 +11,12 @@ export const useCard = (cardInfo: CardInterface) => {
 
   const body = isMoreThanCent ? text.substring(0, 100).concat("...") : text;
 
-  const randomId = useMemo(() => {
-    return Math.random();
-  }, [cardInfo]);
-
   useEffect(() => {
     if (showMoreClicked) {
       setTimeout(() => {
         setShowMoreClicked(false);
       }, 3000);
-    } 
+    }
   }, [showMoreClicked]);
 
   const onClickReadMore = () => {
@@ -31,7 +27,6 @@ export const useCard = (cardInfo: CardInterface) => {
 
   return {
     body,
-    randomId,
     text,
     isMoreThanCent,
     showMoreClicked,

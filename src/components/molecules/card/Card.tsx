@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { getMediaMobile } from "../../../utils/utils";
 import { CardFooter } from "../../atoms/cardFooter/CardFooter";
@@ -40,14 +40,8 @@ export const Card: React.FC<{
   cardInfo: CardInterface;
   isLoading: boolean;
 }> = ({ cardInfo, isLoading }) => {
-  const {
-    body,
-    randomId,
-    text,
-    isMoreThanCent,
-    showMoreClicked,
-    onClickReadMore,
-  } = useCard(cardInfo);
+  const { body, text, isMoreThanCent, showMoreClicked, onClickReadMore } =
+    useCard(cardInfo);
 
   return (
     <Container>
@@ -56,7 +50,9 @@ export const Card: React.FC<{
           <Loader />
         ) : (
           <>
-            <NetworkImage url={`https://cataas.com/cat?id=${randomId}`} />
+            <NetworkImage
+              url={`https://cataas.com/cat?id=${cardInfo.image.id}`}
+            />
 
             <CardBody>
               <p dangerouslySetInnerHTML={{ __html: body }}></p>
@@ -71,7 +67,9 @@ export const Card: React.FC<{
           </>
         )}
       </CardStyleContainer>
-      {showMoreClicked && !isLoading ? <MoreInfoModal>{text}</MoreInfoModal> : null}
+      {showMoreClicked && !isLoading ? (
+        <MoreInfoModal>{text}</MoreInfoModal>
+      ) : null}
     </Container>
   );
 };

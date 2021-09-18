@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { getMediaMobile } from "../../../utils/utils";
+import { getMediaMobile } from "../../../../utils/utils";
 
-export const AppContainer = styled.div`
+export const BgImgContainer = styled.div`
   margin: 0;
   min-height: 100vh;
   background: linear-gradient(

@@ -1,8 +1,8 @@
-import { CatImage, Fact } from "../interfaces/appInterfaces";
+import { CatImage } from "../interfaces/appInterfaces";
 export const catService = {
   getCatImages: async (): Promise<[any, CatImage[]]> => {
     try {
-      const response = await fetch("https://cataas.com/api/cats?limit=4").then(
+      const response = await fetch("https://cataas.com/api/cats").then(
         (resp) => resp.json()
       );
       return [null, response as CatImage[]];

@@ -1,4 +1,4 @@
-import { AppContainer } from "./components/atoms/containers/AppContainer";
+import { BgImgContainer } from "./components/atoms/containers/bgImgContainer/BgImgContainer";
 import { CardGrid } from "./components/organisms/cardGrid/CardGrid";
 
 
@@ -7,9 +7,9 @@ const App = () => {
 
 
   return (
-    <AppContainer>
+    <BgImgContainer>
       <CardGrid  />
-    </AppContainer>
+    </BgImgContainer>
   );
 };
 export default App;

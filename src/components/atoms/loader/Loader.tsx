@@ -30,7 +30,7 @@ const SpinnerContainer = styled.div`
 
 export const Loader = () => {
   return (
-    <SpinnerContainer>
+    <SpinnerContainer data-testid="loader-tets-id">
       <Spinner />
     </SpinnerContainer>
   );

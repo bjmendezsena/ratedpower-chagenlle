@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { getMediaMobile } from "../../../utils/utils";
+import { getMediaMobile } from "../../../../utils/utils";
 
 export const CardsContainer = styled.div`
   width: 55%;
