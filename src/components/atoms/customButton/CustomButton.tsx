@@ -10,7 +10,7 @@ export const CustomButton = styled.button`
   color: white;
   font-weight: 900;
   font-size: 30px;
-  width: 45vw;
+  width: 45%;
   font-family: "Chango", cursive;
   min-width: 300px;
   &:hover {

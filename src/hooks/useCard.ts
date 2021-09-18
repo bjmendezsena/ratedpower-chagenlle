@@ -15,7 +15,7 @@ export const useCard = (cardInfo: CardInterface) => {
     if (showMoreClicked) {
       setTimeout(() => {
         setShowMoreClicked(false);
-      }, 3000);
+      }, 30000);
     }
   }, [showMoreClicked]);
 
